@@ -1,5 +1,26 @@
+<html>
+<head>
+    <title>IMDB Movie Database</title></br>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>IMDB Movie Database</h1>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <input type="hidden" name="submitted" value="true"> 
             <input type="submit" name="v_movies" value="View All Movies">
             <input type="submit" name="v_actors" value="View All Actors">
 </form>
@@ -12,7 +33,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127b"; // Your MySQL database name,,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1.2"; // Your MySQL database name,,, changed from cosi127_pa1.2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -47,7 +68,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127b"; // Your MySQL database name,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1.2"; // Your MySQL database name,, changed from cosi127_pa1.2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -79,8 +100,6 @@
             }   
         ?>
 
-
-
 <?php
 // Check if the form is submitted
 // FOR THE ACTUALY QUERY PART
@@ -95,7 +114,7 @@ if(isset($_POST['submitted'])) {
         $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
         $username = "root"; // Your MySQL username
         $password = ""; // Your MySQL password
-        $dbname = "cosi127b"; // Your MySQL database name,,, changed from cosi127_pa1.2
+        $dbname = "cosi127_pa1.2"; // Your MySQL database name,,, changed from cosi127_pa1.2
 
 
         // Create connection
@@ -143,9 +162,6 @@ if(isset($_POST['submitted'])) {
 
         // Close the database connection
         $conn->close();
-    } else {
-        // Handle case when inputmpid is empty
-        echo "Please enter an mpid";
     }
 } else {
     // Handle case when form is not submitted
@@ -155,3 +171,6 @@ if(isset($_POST['submitted'])) {
 
 ?>
 
+
+</body>
+</html>
