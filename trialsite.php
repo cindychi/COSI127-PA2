@@ -139,10 +139,11 @@
     </div>
 
     <div class="container">
-    <form id="queryForm" method="post" action="php_script.php">
+    <form id="queryForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <div class="form-group">
             <label for="selectTable">Select Table:</label>
             <select class="form-control" id="selectTable" name="selectTable">
+                <option value="">Select Table</option> <!-- Blank option -->
                 <option value="MotionPicture">MotionPicture</option>
                 <option value="User">User</option>
                 <option value="Likes">Likes</option>
@@ -152,7 +153,7 @@
         <div class="form-group">
             <label for="selectField">Select Field:</label>
             <select class="form-control" id="selectField" name="selectField">
-                <!-- Add options for fields based on the selected table using JavaScript or server-side scripting -->
+                <!-- Options will be dynamically populated based on the selected table -->
             </select>
         </div>
         <div class="form-group">
