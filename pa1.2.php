@@ -11,7 +11,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COSI 127b</title>
+    <title>COSI 127B</title>
     
 </head>
 
@@ -133,12 +133,13 @@
 
 <body>
     <div class="container">
-        <h1 style="text-align:center">COSI 127 - PA2</h1><br>
-        <h3 style="text-align:center">OUR IMBD </h3><br>
+        <br>
+        <h1 style="text-align:center">COSI 127 - PA 1.2</h1><br>
+        <h3 style="text-align:center">OUR IMBD</h3><br>
     </div>
 
     <div class="container">
-    <form id="mpidForm" method="post" action="your_php_script.php">
+    <form id="mpidForm" method="post" action="php_script.php">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Enter mpid" name="inputmpid" id="inputmpid">
             <div class="input-group-append">
@@ -147,6 +148,7 @@
         </div>
     </form>
     </div>
+    
 
 
 
