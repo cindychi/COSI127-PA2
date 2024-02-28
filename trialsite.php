@@ -139,7 +139,7 @@
     </div>
 
     <div class="container">
-    <form id="queryForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <form id="queryForm" method="post" action="php_script.php">
         <div class="form-group">
             <label for="selectTable">Select Table:</label>
             <select class="form-control" id="selectTable" name="selectTable">
