@@ -12,19 +12,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COSI 127b</title>
+    
 </head>
 
 
 
+<html>
+<head>
+    <title>IMDB Movie Database</title></br>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
 <body>
-        <h1>IMDB Movie Database</h1>
+    <h1>IMDB Movie Database</h1>
 
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <input type="submit" name="v_movies" value="View All Movies">
-            <input type="submit" name="v_actors" value="View All Actors">
-        </form>
-
-       
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <input type="submit" name="v_movies" value="View All Movies">
+        <input type="submit" name="v_actors" value="View All Actors"><br>
+    </form>      
 
 
         <?php
@@ -35,7 +52,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127b"; // Your MySQL database name,,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1.2"; // Your MySQL database name,,, changed from cosi127_pa1.2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -70,7 +87,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127b"; // Your MySQL database name,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1.2"; // Your MySQL database name,, changed from cosi127_pa1.2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -175,7 +192,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -244,7 +261,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -252,7 +269,7 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Prepare SQL statement for Users
-        $stmt = $conn->prepare("SELECT email, name, age FROM User where age>=$mpid");
+        $stmt = $conn->prepare("SELECT email, name, age FROM Users where age>=$mpid");
         $stmt->execute();
 
         // Set the resulting array to associative
@@ -314,7 +331,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -383,7 +400,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -452,7 +469,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -521,7 +538,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -591,7 +608,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -660,7 +677,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -728,7 +745,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
@@ -755,25 +772,6 @@
     $conn = null;
     ?>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="container">
     <h1>Likes</h1>
@@ -815,7 +813,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "COSI127b";
+    $dbname = "cosi127_pa1.2";
 
     try {
         // Connect to MySQL DB using PDO
