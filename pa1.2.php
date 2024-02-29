@@ -11,7 +11,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COSI 127B</title>
+    <title>COSI 127b</title>
     
 </head>
 
@@ -124,18 +124,30 @@
 
 
 
+<body>
+
+<div class="container">
+    <form id="genreForm" method="post" action="php_script.php"> <!-- Specify php_script.php as the action -->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter a genre" name="inputgenre_name" id="inputgenre_name">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" name="submitted" id="button-addon2">Query This</button>
+            </div>
+        </div>
+    </form>
+</div>
 
 
 
 
 
+<!-- 
 
 
 <body>
     <div class="container">
-        <br>
-        <h1 style="text-align:center">COSI 127 - PA 1.2</h1><br>
-        <h3 style="text-align:center">OUR IMBD</h3><br>
+        <h1 style="text-align:center">COSI 127 - PA2</h1><br>
+        <h3 style="text-align:center">OUR IMBD </h3><br>
     </div>
 
     <div class="container">
@@ -147,8 +159,7 @@
             </div>
         </div>
     </form>
-    </div>
-    
+    </div> -->
 
 
 
@@ -224,7 +235,7 @@
 
 
 <div class="container">
-    <h1>Users</h1>
+    <h1>User</h1>
     <?php
     // Check if the submit button has been clicked
     if(isset($_POST['submitted'])) {
@@ -271,7 +282,7 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Prepare SQL statement for Users
-        $stmt = $conn->prepare("SELECT email, name, age FROM Users where age>=$mpid");
+        $stmt = $conn->prepare("SELECT email, name, age FROM User where age>=$mpid");
         $stmt->execute();
 
         // Set the resulting array to associative
