@@ -43,9 +43,10 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <label for="sort_by">Sort By:</label>
     <select name="sort_by" id="sort_by">
-        <option value="rating">Rating</option>
-        <option value="budget">Budget</option>
-        <option value="boxoffice_collection">Box Office Collection</option>
+        <option value="">""</option>
+        <option value="Rating">Rating</option>
+        <option value="Budget">Budget</option>
+        <option value="Boxoffice_Collection">Box Office Collection</option>
     </select>
     <button type="submit" name="sort_movies">Sort</button>
 </form>
