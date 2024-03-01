@@ -12,11 +12,18 @@
 <body>
     <h1>IMDB Movie Database</h1>
 
+    <div style="display: flex;">
     <form action="tabs.php" method="post">
         <input type="submit" name="v_tables" value="View All Tables">
-        <input type="submit" name="v_movies" value="View All Movies">
-        <input type="submit" name="v_actors" value="View All Actors"><br>
+        <input type="submit" name="v_actors" value="View All Actors">
     </form>
+    <form action="allmovies.php" method="post">
+        <input type="submit" name="v_movies" value="View All Movies">
+    </form>
+</div>
+
+   
+
 
     <!-- Home button -->
     <a href="index.php" class="btn btn-primary">Home</a>
@@ -87,6 +94,15 @@ if(isset($_POST['like'])) {
     $conn = null;
 }
 ?>
+
+
+
+
+
+
+
+
+
 
 
 
