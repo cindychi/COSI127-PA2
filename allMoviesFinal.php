@@ -43,7 +43,7 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <label for="sort_by">Sort By:</label>
     <select name="sort_by" id="sort_by">
-        <option value="">""</option>
+        <option value=""></option>
         <option value="Rating">Rating</option>
         <option value="Budget">Budget</option>
         <option value="Boxoffice_Collection">Box Office Collection</option>
