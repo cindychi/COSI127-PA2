@@ -134,7 +134,7 @@
         <div class="form-group">
             <label for="selectTable">Select Table:</label>
             <select class="form-control" id="selectTable" name="selectTable">
-                <option value="">Select Table</option> <!-- Blank option -->
+                <option value=""></option> <!-- Blank option -->
                 <option value="MotionPicture">MotionPicture</option>
                 <option value="Users">Users</option>
                 <option value="Likes">Likes</option>
