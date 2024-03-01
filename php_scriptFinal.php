@@ -1,6 +1,6 @@
 <html>
 <head>
-<a href="PA2.php" class="btn btn-primary">Home</a>
+<a href="indexFinal.php" class="btn btn-primary">Home</a>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
         $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
         $username = "root"; // Your MySQL username
         $password = ""; // Your MySQL password
-        $dbname = "cosi127_pa1.2"; // Your MySQL database name
+        $dbname = "cosi127_pa1_2"; // Your MySQL database name
 
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
         $username = "root"; // Your MySQL username
         $password = ""; // Your MySQL password
-        $dbname = "cosi127_pa1.2"; // Your MySQL database name
+        $dbname = "cosi127_pa1_2"; // Your MySQL database name
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
