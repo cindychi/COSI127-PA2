@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>IMDB Movie Database</title>
     <style>
         table {
@@ -30,6 +32,7 @@
         <option value="DESC">Descending</option>
         </select>
     </form>
+    <a href="index.php" class="btn btn-primary">Home</a>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -105,14 +108,6 @@
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
         elseif (isset($_POST["inputgenre_name"])) {
             $inputgenre_name = $_POST["inputgenre_name"];
 
@@ -172,6 +167,12 @@
         echo "Form not submitted.";
     }
     ?>
+
+
+
+
+
+
 
 </body>
 </html>
