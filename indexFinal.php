@@ -37,11 +37,11 @@
     <h1>IMDB Movie Database</h1>
 
     <div style="display: flex;">
-    <form action="tabs.php" method="post">
+    <form action="tabsFinal.php" method="post">
         <input type="submit" name="v_tables" value="View All Tables">
         <input type="submit" name="v_actors" value="View All Actors">
     </form>
-    <form action="allmovies.php" method="post">
+    <form action="allmoviesFinal.php" method="post">
         <input type="submit" name="v_movies" value="View All Movies">
     </form>
 </div>   
@@ -54,7 +54,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127_pa1.2"; // Your MySQL database name,,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1_2"; // Your MySQL database name,,, changed from cosi127_pa1_2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -89,7 +89,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127_pa1.2"; // Your MySQL database name,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1_2"; // Your MySQL database name,, changed from cosi127_pa1_2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -126,11 +126,11 @@
     <div class="container">
         <br>
         <h1 style="text-align:center">COSI 127 - PA 1.2</h1><br>
-        <h3 style="text-align:center">OUR IMBD</h3><br>
+        <h3 style="text-align:center">OUR IMDB</h3><br>
     </div>
 
     <div class="container">
-    <form id="queryForm" method="post" action="php_script.php">
+    <form id="queryForm" method="post" action="php_scriptFinal.php">
         <div class="form-group">
             <label for="selectTable">Select Table:</label>
             <select class="form-control" id="selectTable" name="selectTable">
@@ -233,7 +233,7 @@ if(isset($_POST['like'])) {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "cosi127_pa1.2";
+    $dbname = "cosi127_pa1_2";
 
     try {
         // Create connection
