@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<a href="PA2.php" class="btn btn-primary">Home</a>
+<a href="indexFinal.php" class="btn btn-primary">Home</a>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>IMDB Movie Database</title></br>
@@ -30,7 +30,7 @@
         <input type="submit" name="v_tables" value="View All Tables"> 
         <input type="submit" name="v_actors" value="View All Actors">
     </form>
-    <form action="allmovies.php" method="post">
+    <form action="allmoviesFinal.php" method="post">
         <input type="submit" name="v_movies" value="View All Movies">
     </form>
 </div>    
@@ -42,7 +42,7 @@
                     $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                     $username = "root"; // Your MySQL username
                     $password = ""; // Your MySQL password
-                    $dbname = "cosi127_pa1.2"; // Your MySQL database name, changed from cosi127_pa1.2
+                    $dbname = "cosi127_pa1_2"; // Your MySQL database name, changed from cosi127_pa1_2
             
                     // Create connection
                     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -108,7 +108,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127_pa1.2"; // Your MySQL database name,,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1_2"; // Your MySQL database name,,, changed from cosi127_pa1_2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -160,7 +160,7 @@
                 $servername = "localhost"; // Change if your MySQL server is hosted elsewhere
                 $username = "root"; // Your MySQL username
                 $password = ""; // Your MySQL password
-                $dbname = "cosi127_pa1.2"; // Your MySQL database name,, changed from cosi127_pa1.2
+                $dbname = "cosi127_pa1_2"; // Your MySQL database name,, changed from cosi127_pa1_2
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -212,7 +212,7 @@ if(isset($_POST['like'])) {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "cosi127_pa1.2";
+    $dbname = "cosi127_pa1_2";
 
     try {
         // Create connection
