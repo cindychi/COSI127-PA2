@@ -2,6 +2,7 @@
 
 <html>
 <head>
+<a href="index.php" class="btn btn-primary">Home</a>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>IMDB Movie Database</title></br>
@@ -24,13 +25,24 @@
 <body>
     <h1>IMDB Movie Database</h1>
 
+    <div style="display: flex;">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <input type="submit" name="v_tables" value="View All Tables">
+        <input type="submit" name="v_tables" value="View All Tables"> 
+        <input type="submit" name="v_actors" value="View All Actors">
+    </form>
+    <form action="allmovies.php" method="post">
         <input type="submit" name="v_movies" value="View All Movies">
-        <input type="submit" name="v_actors" value="View All Actors"><br>
-        
-    </form>      
-    <a href="index.php" class="btn btn-primary">Home</a>
+    </form>
+</div>
+
+
+    
+
+       
+
+
+
+
 
         <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -168,7 +180,11 @@
                 }
 
                 // Query to fetch all actors
-                $sql = "SELECT name, nationality, dob, gender FROM People";
+                $sql = "SELECT p.name, p.nationality, p.dob, p.gender, mp.name AS movie_name
+                FROM People p
+                JOIN Role r ON p.id = r.pid
+                JOIN MotionPicture mp ON r.mpid = mp.id
+                WHERE r.role_name = 'Actor'";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
