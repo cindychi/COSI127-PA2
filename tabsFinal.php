@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
 <a href="indexFinal.php" class="btn btn-primary">Home</a>
