@@ -1,7 +1,3 @@
-
-
-
-
 <head>
     <a href="indexFinal.php" class="btn btn-primary">Home</a>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,12 +19,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-
 </head>
-
-
-
 
 <form action="tabsFinal.php" method="post">
         <input type="submit" name="v_tables" value="View All Tables">
@@ -36,9 +27,6 @@
         <input type="submit" name="v_movies" value="View All Movies"><br>
 
     </form>
-
-    
-   
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <label for="sort_by">Sort By:</label>
@@ -50,7 +38,6 @@
     </select>
     <button type="submit" name="sort_movies">Sort</button>
 </form>
-
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
