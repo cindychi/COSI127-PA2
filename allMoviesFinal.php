@@ -105,17 +105,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         }
 
+        if($sort_by == ""){
+            // Query to fetch and sort movies based on the selected option
+            $sql = "SELECT mp.name, mp.rating, mp.production, mp.budget, m.boxoffice_collection 
+            FROM MotionPicture mp
+            LEFT JOIN Movie m ON mp.id = m.mpid
+            ORDER BY Rating ASC"; // Assuming ascending order
+        }
+
+        else{
         // Query to fetch and sort movies based on the selected option
         $sql = "SELECT mp.name, mp.rating, mp.production, mp.budget, m.boxoffice_collection 
                 FROM MotionPicture mp
                 LEFT JOIN Movie m ON mp.id = m.mpid
                 ORDER BY $sort_by ASC"; // Assuming ascending order
+        }
 
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             // Output data of each row
-            echo "<h2>Movies Sorted By: $sort_by</h2>";
+            if($sort_by == ""){
+                echo "<h2>Movies Sorted By: Rating</h2>";
+            }
+            else{
+                echo "<h2>Movies Sorted By: $sort_by</h2>";
+            }
             echo "<table>";
             echo "<tr><th>Name</th><th>Rating</th><th>Production</th><th>Budget</th><th>Box Office Collection</th></tr>";
             while ($row = $result->fetch_assoc()) {
